@@ -12,6 +12,7 @@ __status__ 		= "Prototype"
 
 from scapy.all import *
 import binascii
+import zlib
 from rc4 import RC4
 #Cle wep AA:AA:AA:AA:AA
 key= b'\xaa\xaa\xaa\xaa\xaa'
@@ -37,8 +38,12 @@ icv_enclair=cleartext[-4:]
 icv_enclair = icv_enclair
 icv_numerique=struct.unpack('!L', icv_enclair)
 
+
+
+
 # le message sans le ICV
 text_enclair=cleartext[:-4]
+
 
 print ('Text: ' + text_enclair.hex())
 print ('icv:  ' + icv_enclair.hex())
