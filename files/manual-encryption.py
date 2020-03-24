@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
+## Autheurs: Julien Quartier & Nathan Séville
+##
+
 """ Manually decrypt a wep message given the WEP key"""
 
 __author__      = "Abraham Rubinstein"
